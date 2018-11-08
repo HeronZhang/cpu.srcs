@@ -1,25 +1,3 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2018/11/07 21:24:48
-// Design Name: 
-// Module Name: ALU
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
 module ALU(X,Y,Aluc,R,Z);
 	input[31:0]X,Y;
 	input[1:0]Aluc;
