@@ -76,9 +76,12 @@ begin
 // 
 // Revision:
 // Revision 0.01 - File Created
+// Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+
+>>>>>>> parent of a621d5b... 整理
 module test(
     );
 reg [31:0]X,Y;
@@ -86,6 +89,7 @@ reg [1:0]Aluc;
 wire [31:0]R;
 wire Z;
 
+<<<<<<< HEAD
 =======
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
@@ -116,6 +120,8 @@ reg [1:0]Aluc;
 wire [31:0]R;
 wire Z;
 
+>>>>>>> parent of a621d5b... 整理
+=======
 >>>>>>> parent of a621d5b... 整理
 ALU uut(.X(X),
 		.Y(Y),
