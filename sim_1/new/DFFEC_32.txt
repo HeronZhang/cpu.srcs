@@ -1,0 +1,28 @@
+module test(
+    );
+reg [31:0]D;
+reg En,Clk,Clrn;
+wire [31:0]Q,Qn;
+
+D_FFEC32 uut(.D(D),
+			.Clk(Clk),
+			.En(En),
+			.Clrn(Clrn),
+			.Q(Q),
+			.Qn(Qn),
+			);
+initial 
+	begin
+		Wr=5'd0;
+		D=32'd666;
+
+	end
+always
+begin
+
+		#20 Clk = 0;
+
+		#20 Clk = 1;
+
+end
+endmodule
