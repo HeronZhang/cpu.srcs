@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 module test(
     );
 reg [31:0]D;
@@ -63,6 +64,37 @@ reg [1:0]Aluc;
 wire [31:0]R;
 wire Z;
 
+=======
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2018/11/07 23:17:56
+// Design Name: 
+// Module Name: test
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module test(
+    );
+reg [31:0]X,Y;
+reg [1:0]Aluc;
+wire [31:0]R;
+wire Z;
+
+>>>>>>> parent of a621d5b... 整理
 ALU uut(.X(X),
 		.Y(Y),
 		.Aluc(Aluc),
