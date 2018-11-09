@@ -15,7 +15,6 @@ Q31,Q30,Q29,Q28,Q27,Q26,Q25,Q24,Q23,Q22,Q21,Q20,Q19
     D_FFEC32 q24 (D,Clk,En[24],Clrn,Q24);
     D_FFEC32 q23 (D,Clk,En[23],Clrn,Q23);
     D_FFEC32 q22 (D,Clk,En[22],Clrn,Q22);
-    D_FFEC32 q21 (D,Clk,En[21],Clrn,Q21);
     D_FFEC32 q20 (D,Clk,En[20],Clrn,Q20);
     D_FFEC32 q19 (D,Clk,En[19],Clrn,Q19);
     D_FFEC32 q18 (D,Clk,En[18],Clrn,Q18);
