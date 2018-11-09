@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 module test(
     );
 reg [31:0]D;
@@ -56,6 +57,27 @@ begin
 //////////////////////////////////////////////////////////////////////////////////
 
 >>>>>>> parent of a621d5b... 整理
+
+=======
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2018/11/07 23:17:56
+// Design Name: 
+// Module Name: test
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
 module test(
     );
