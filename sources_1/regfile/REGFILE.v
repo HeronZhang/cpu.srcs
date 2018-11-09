@@ -39,7 +39,7 @@ module REGFILE(Ra,Rb,D,Wr,We,Clk,Clrn,Qa,Qb);
     Q0_reg32;
     DEC5T32E dec(Wr,We,Y_mux);
 
-    REG32(D,Y_mux,Clk,Clrn,
+    REG32 reg32(D,Y_mux,Clk,Clrn,
     Q31_reg32,
     Q30_reg32,
     Q29_reg32,
