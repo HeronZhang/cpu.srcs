@@ -6,3 +6,4 @@ module D_FFEC(D,Clk,En,Clrn,Q,Qn);
 	and i0(Y_C,Y0,Clrn);
 	D_FF d0(Y_C,Clk,Q,Qn);
 endmodule
+

@@ -1,4 +1,4 @@
-module DATAMEM(Addr,DinClk,We,Dout);
+module DATAMEM(Addr,Din,Clk,We,Dout);
     input [31:0]Addr,Din;
     input Clk,We;
     output [31:0]Dout;

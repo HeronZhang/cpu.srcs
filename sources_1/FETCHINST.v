@@ -1,6 +1,6 @@
 module FETCHINST(Clk,instruction,PCsrc);
     input Clk;
-    input [31:0]PCsrc;
+    input [1:0]PCsrc;
     output [31:0]instruction;
     wire [31:0]pcTaddinst,addTmuxaddr,brTmux,jumpTmux,muxTpc;
     //寄存器变量
