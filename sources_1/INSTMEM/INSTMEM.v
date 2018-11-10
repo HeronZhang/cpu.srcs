@@ -1,5 +1,5 @@
 module INSTMEM(Addr,Inst);
-    input [31:0]Addr；
+    input [31:0]Addr;
     output [31:0]Inst;
     wire [31:0] Rom[31:0];
     assign Rom[5'h00]=32'hXXXXXXXX;

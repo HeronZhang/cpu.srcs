@@ -1,10 +1,10 @@
-module EXT(in,out,Sext)
+module EXT(in,out,Sext);
 input[15:0]in;
 input Sext;
-output [31:0]out;
+output reg [31:0]out;
 always @(*)
 begin
-    out[0:15]=in;
+    out[15:0]=in;
     if(Sext==1)
         out[31:16]=16'd0;
     else
