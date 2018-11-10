@@ -11,12 +11,12 @@ module FETCHINST(Clk,instruction,PCsrc);
 
     wire [31:0]X;
     assign X=32'd4;
-    CLA_32 ADD(X,pcTaddinst,,addTmuxaddr,);
+    CLA_32 ADD(X,pcTaddinst,0,addTmuxaddr,);
 
     INSTMEM INST_ROM(pcTaddinst,instruction);
 
     Br_Jump_Addr br(instruction,brTmux,addTmuxaddr,jumpTmux);
 
-    MUX3X1 mux(PCsrc,addTmuxaddr,brTmux,jumpTmux,muxTpc);
+    MUX3X32 mux(PCsrc,addTmuxaddr,brTmux,jumpTmux,muxTpc);
 endmodule
     
