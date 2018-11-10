@@ -3,11 +3,8 @@ module FETCHINST(Clk,instruction,PCsrc);
     input [1:0]PCsrc;
     output [31:0]instruction;
     wire [31:0]pcTaddinst,addTmuxaddr,brTmux,jumpTmux,muxTpc;
-    //寄存器变量
-    wire En,Clrn;
-    assign En=1;
-    assign Clrn=1;
-    D_FFEC32 PC(muxTpc,Clk,En,Clrn,pcTaddinst);
+
+    PC  pc(muxTpc,Clk,pcTaddinst);
 
     wire [31:0]X;
     assign X=32'd4;
