@@ -17,7 +17,7 @@ CONUNIT controlunit(instrunction[31:26],
                     Reg2reg);
 
 FETCHINST fetchcircuit(Clk,instrunction,PCsrc);
-MUX2X5 muxreg(instrunction[20:16],instrunction[15:11],Regrt,Wr);
+MUX2X5 muxreg(instrunction[15:11],instrunction[20:16],Regrt,Wr);
 MUX2X32 muxalu(Qb,extimm,Aluqb,Y);
 ALU alunit(Qa,Y,Aluc,R,Z);
 EXT ext(instrunction[15:0],extimm,Se);

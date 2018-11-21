@@ -3,11 +3,11 @@ module DATAMEM(Addr,Din,Clk,We,Dout);
     input Clk,We;
     output [31:0]Dout;
     reg[31:0] Ram[31:0];
-    assign Dout=Ram[Addr[6:2]];
+    assign Dout=Ram[Addr[4:0]];
     always@(posedge Clk)
     begin
         if(We)
-            Ram[Addr[6:2]]<=Din;
+            Ram[Addr[4:0]]<=Din;
     end
     integer i;
     initial
