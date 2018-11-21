@@ -1,7 +1,18 @@
-module D_FFEC32(D,Clk,En,Clrn,Q,Qn);
+module D_FFEC32(D,Clk,En,Q);
 	input[31:0]D;
-	input Clk,En,Clrn;
-	output [31:0]Q,Qn;
+	input Clk,En;
+//	output [31:0]Q,Qn;
+	output reg [31:0]Q;
+	initial
+	begin
+	Q=0;
+	end
+
+	always@(posedge Clk)
+	begin
+	if(En==1)Q=D;
+	end
+	/*
 	D_FFEC d0(D[0],Clk,En,Clrn,Q[0],Qn[0]);
 	D_FFEC d1(D[1],Clk,En,Clrn,Q[1],Qn[1]);
 	D_FFEC d2(D[2],Clk,En,Clrn,Q[2],Qn[2]);
@@ -33,5 +44,5 @@ module D_FFEC32(D,Clk,En,Clrn,Q,Qn);
 	D_FFEC d28(D[28],Clk,En,Clrn,Q[28],Qn[28]);
 	D_FFEC d29(D[29],Clk,En,Clrn,Q[29],Qn[29]);
 	D_FFEC d30(D[30],Clk,En,Clrn,Q[30],Qn[30]);
-	D_FFEC d31(D[31],Clk,En,Clrn,Q[31],Qn[31]);
+	D_FFEC d31(D[31],Clk,En,Clrn,Q[31],Qn[31]);*/
 endmodule

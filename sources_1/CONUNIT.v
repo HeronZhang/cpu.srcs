@@ -19,12 +19,13 @@ wire i_bne=(Op==6'b000101)?1:0;
 wire i_j=(Op==6'b000010)?1:0;
 
 assign Regrt=~R_type;
-assign Sext=~(i_addi+i_ori);
-assign Wreg=R_type+i_addi+i_andi+i_ori+i_lw;
-assign Aluqb=R_type+i_beq+i_bne;
+assign Se=~(i_addi||i_ori);
+assign Wreg=R_type||i_addi||i_andi||i_ori||i_lw;
+assign Aluqb=R_type||i_beq||i_bne;
 assign Wmem=i_sw;
-assign Aluc[1]=i_and+i_addi+i_or+i_ori;
-assign Aluc[0]=i_sub+i_beq+i_or+i_ori;
+assign Aluc[1]=i_and||i_addi||i_or||i_ori;
+assign Aluc[0]=i_sub||i_beq||i_or||i_ori;
 assign Pcsrc[1]=i_j;
-assign Pcsrc[0]=i_beq&Z+i_bne&~Z;
+assign Pcsrc[0]=i_beq&Z||i_bne&~Z;
+assign Reg2reg=i_lw;
 endmodule

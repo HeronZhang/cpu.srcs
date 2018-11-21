@@ -23,5 +23,5 @@ ALU alunit(Qa,Y,Aluc,R,Z);
 EXT ext(instrunction[15:0],extimm,Se);
 DATAMEM mem(R,Qb,Clk,Wmem,Dout);
 MUX2X32 muxmem(R,Dout,Reg2reg,muxTreg);
-REGFILE regs(instrunction[25:21],instrunction[20:16],muxTreg,Wr,Wreg,Clk,1,Qa,Qb); 
+REGFILE regs(instrunction[25:21],instrunction[20:16],muxTreg,Wr,Wreg,Clk,Qa,Qb); 
 endmodule

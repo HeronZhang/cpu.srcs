@@ -2,9 +2,9 @@ module INSTMEM(Addr,Inst);
     input [31:0]Addr;
     output [31:0]Inst;
     wire [31:0] Rom[31:0];
-    assign Rom[5'h00]=32'h8C020000;
-    assign Rom[5'h01]=32'h8C030001;
-    assign Rom[5'h02]=32'h00432020;
+    assign Rom[5'h00]=32'h8C020001; //rs=0 从内存01取数，存到寄存器2
+    assign Rom[5'h01]=32'h8C030002; //从内存02取数，存到寄存器3
+    assign Rom[5'h02]=32'h00430020; //把寄存器2与3相加，存到寄存器0
     assign Rom[5'h03]=32'hXXXXXXXX;
     assign Rom[5'h04]=32'hXXXXXXXX;
     assign Rom[5'h05]=32'hXXXXXXXX;

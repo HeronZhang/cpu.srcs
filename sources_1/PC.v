@@ -10,8 +10,7 @@ end
 
 always@(posedge Clk)
 begin
-regs=D;
-Q=regs;
+Q=D;
 end
 endmodule
 

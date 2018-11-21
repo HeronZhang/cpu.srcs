@@ -1,7 +1,7 @@
-module REGFILE(Ra,Rb,D,Wr,We,Clk,Clrn,Qa,Qb);
+module REGFILE(Ra,Rb,D,Wr,We,Clk,Qa,Qb);
     input [4:0]Ra,Rb,Wr;
     input [31:0]D;
-    input We,Clk,Clrn;
+    input We,Clk;
     output [31:0]Qa,Qb;
 
     wire[31:0]Y_mux,
@@ -39,7 +39,7 @@ module REGFILE(Ra,Rb,D,Wr,We,Clk,Clrn,Qa,Qb);
     Q0_reg32;
     DEC5T32E dec(Wr,We,Y_mux);
 
-    REG32 reg32(D,Y_mux,Clk,Clrn,
+    REG32 reg32(D,Y_mux,Clk,
     Q31_reg32,
     Q30_reg32,
     Q29_reg32,
@@ -138,4 +138,5 @@ module REGFILE(Ra,Rb,D,Wr,We,Clk,Clrn,Qa,Qb);
     Q29_reg32,
     Q30_reg32,
     Q31_reg32,Rb,Qb);
+
 endmodule
