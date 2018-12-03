@@ -1,8 +1,8 @@
-module CONUNIT(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg);
+module CONUNIT(Op,Func,Z,Regrt,Se,Wreg,Aluqb,Aluc,Wmem,Pcsrc,Reg2reg,V,Mfc0,Mtc0,Cause,Wcau,Wsta,Sta,Wepc,Intr,Inta);
 input [5:0]Op,Func;
-input Z;
+input Z,V;
 output Regrt,Se,Wreg,Aluqb,Wmem,Reg2reg;
-output [1:0]Pcsrc,Aluc;
+output [1:0]Pcsrc,Aluc,Mfc0;
 
 wire R_type=~|Op;
 wire i_add=R_type&(Func==6'b100000);

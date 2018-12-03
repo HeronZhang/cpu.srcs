@@ -1,8 +1,8 @@
-module FETCHINST(Clk,instruction,PCsrc);
+module FETCHINST(Clk,instruction,PCsrc,pcTaddinst,muxTpc,epc,base);
     input Clk;
     input [1:0]PCsrc;
     output [31:0]instruction;
-    wire [31:0]pcTaddinst,addTmuxaddr,brTmux,jumpTmux,muxTpc;
+    wire [31:0]pcTaddinst,addTmuxaddr,brTmux,jumpTmux,muxTpc,epc,base;
 
     PC  pc(muxTpc,Clk,pcTaddinst);
 
@@ -14,6 +14,6 @@ module FETCHINST(Clk,instruction,PCsrc);
 
     Br_Jump_Addr br(instruction,brTmux,addTmuxaddr,jumpTmux);
 
-    MUX3X32 mux(PCsrc,addTmuxaddr,brTmux,jumpTmux,muxTpc);
+    MUX5X32 mux(PCsrc,addTmuxaddr,epc,brTmux,jumpTmux,base,muxTpc);
 endmodule
     
