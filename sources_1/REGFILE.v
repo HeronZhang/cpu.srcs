@@ -73,7 +73,7 @@ module REGFILE(Ra,Rb,D,Wr,We,Clk,Qa,Qb);
     Q1_reg32,
     Q0_reg32);
 
-    MUX32X32 select1(Q0_reg32,
+    MUX32X32 select1(32'b0,
     Q1_reg32,
     Q2_reg32,
     Q3_reg32,
@@ -106,7 +106,7 @@ module REGFILE(Ra,Rb,D,Wr,We,Clk,Qa,Qb);
     Q30_reg32,
     Q31_reg32,Ra,Qa);
 
-    MUX32X32 select2(Q0_reg32,
+    MUX32X32 select2(32'b0,
     Q1_reg32,
     Q2_reg32,
     Q3_reg32,

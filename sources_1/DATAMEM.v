@@ -12,12 +12,7 @@ module DATAMEM(Addr,Din,Clk,We,Dout);
     integer i;
     initial
     begin
-        for(i=0;i<32;i=i+1)
-          begin
-            Ram[i]=0;
-            end
-            Ram[1]=32'd3;
-            Ram[2]=32'd4;
+			for ( i = 0 ; i <= 31 ; i = i + 1) Ram [i] = i * i;
     end
 endmodule    
     

@@ -5,7 +5,7 @@ output reg [31:0]out;
 always @(*)
 begin
     out[15:0]=in;
-    if(Sext==1)
+    if(Sext==0)
         out[31:16]=16'd0;
     else
         if(in[15]==1)
